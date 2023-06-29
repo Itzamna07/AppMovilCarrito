@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="0dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="WERICHA"
+            android:fontFamily="@font/zevidaregular"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="59dp"
+            android:textColor="@color/black"
+            />
+
+        <Button
+            android:id="@+id/btnEsp1"
+            app:cornerRadius="30dp"
+            android:elevation="40dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:padding="0dp"
+            android:layout_centerHorizontal="false"
+            android:backgroundTint="@color/EspecialRed"
+            android:text="6"
+            android:textSize="35dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentEnd="true"
+            />
+
+        <Button
+            android:id="@+id/btnEsp2"
+            app:cornerRadius="30dp"
+            android:elevation="40dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:padding="0dp"
+            android:layout_centerHorizontal="false"
+            android:backgroundTint="@color/EspecialRed"
+            android:text="7"
+            android:textSize="35dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_toLeftOf="@id/btnEsp1"
+            />
+
+        <Button
+            android:id="@+id/btnCon"
+            app:cornerRadius="30dp"
+            android:elevation="40dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:padding="0dp"
+            android:layout_centerHorizontal="false"
+            android:backgroundTint="@color/NewBlue"
+            android:text="X"
+            android:textSize="35dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_toLeftOf="@id/btnEsp2"
+            />
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/PAD"
+        android:layout_below="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp"
+        android:paddingTop="0dp"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:paddingBottom="0dp"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:id="@+id/PADLado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp">
+
+            <Button
+                android:id="@+id/btnIzq"
+                app:cornerRadius="30dp"
+                android:elevation="40dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="0dp"
+                android:layout_centerHorizontal="false"
+                android:backgroundTint="@color/EspecialBlue"
+                android:text="3"
+                android:textSize="35dp"
+                android:layout_marginEnd="40dp"
+
+                />
+            <Button
+                android:id="@+id/btnDer"
+                app:cornerRadius="30dp"
+                android:elevation="40dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="0dp"
+                android:layout_centerHorizontal="false"
+                android:backgroundTint="@color/EspecialBlue"
+                android:text="4"
+                android:textSize="35dp"
+                android:layout_toRightOf="@+id/btnIzq"
+
+                />
+
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/PADFrente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="50dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            >
+
+
+            <Button
+                android:id="@+id/btnFren"
+                app:cornerRadius="30dp"
+                android:elevation="40dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="0dp"
+                android:layout_centerHorizontal="false"
+                android:backgroundTint="@color/EspecialBlue"
+                android:text="1"
+                android:textSize="35dp"
+                android:layout_alignParentEnd="true"
+                />
+
+            <Button
+                android:id="@+id/btnLock"
+                app:cornerRadius="30dp"
+                android:elevation="40dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="0dp"
+                android:layout_centerHorizontal="false"
+                android:backgroundTint="@color/EspecialRed"
+                android:text="5"
+                android:textSize="35dp"
+                android:layout_marginEnd="30dp"
+                android:layout_toLeftOf="@+id/btnFren"
+                />
+
+            <Button
+                android:id="@+id/btnDown"
+                app:cornerRadius="30dp"
+                android:elevation="40dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="0dp"
+                android:layout_marginTop="40dp"
+                android:layout_centerHorizontal="false"
+                android:backgroundTint="@color/EspecialBlue"
+                android:text="2"
+                android:textSize="35dp"
+                android:layout_below="@+id/btnFren"
+                android:layout_alignParentEnd="true"
+                />
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
