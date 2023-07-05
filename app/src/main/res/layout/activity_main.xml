@@ -4,75 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondometal"
     tools:context=".MainActivity">
 
     <RelativeLayout
         android:id="@+id/header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingBottom="0dp"
+        android:padding="10dp"
+        android:background="@color/blacky"
         android:orientation="horizontal">
 
 
-        <TextView
+        <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="WERICHA"
-            android:fontFamily="@font/zevidaregular"
+            android:background="@drawable/nombre"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="0dp"
             android:layout_marginBottom="10dp"
-            android:textSize="59dp"
-            android:textColor="@color/black"
-            />
-
-        <Button
-            android:id="@+id/btnEsp1"
-            app:cornerRadius="30dp"
-            android:elevation="40dp"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:padding="0dp"
-            android:layout_centerHorizontal="false"
-            android:backgroundTint="@color/EspecialRed"
-            android:text="6"
-            android:textSize="35dp"
-            android:layout_marginEnd="50dp"
-            android:layout_marginTop="20dp"
-            android:layout_alignParentEnd="true"
-            />
-
-        <Button
-            android:id="@+id/btnEsp2"
-            app:cornerRadius="30dp"
-            android:elevation="40dp"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:padding="0dp"
-            android:layout_centerHorizontal="false"
-            android:backgroundTint="@color/EspecialRed"
-            android:text="7"
-            android:textSize="35dp"
-            android:layout_marginEnd="50dp"
-            android:layout_marginTop="20dp"
-            android:layout_toLeftOf="@id/btnEsp1"
-            />
-
-        <Button
-            android:id="@+id/btnCon"
-            app:cornerRadius="30dp"
-            android:elevation="40dp"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:padding="0dp"
-            android:layout_centerHorizontal="false"
-            android:backgroundTint="@color/NewBlue"
-            android:text="X"
-            android:textSize="35dp"
-            android:layout_marginEnd="100dp"
-            android:layout_marginTop="20dp"
-            android:layout_toLeftOf="@id/btnEsp2"
             />
 
     </RelativeLayout>
@@ -100,34 +51,25 @@
             android:layout_alignParentStart="true"
             android:layout_marginStart="20dp">
 
-            <Button
+            <ImageButton
                 android:id="@+id/btnIzq"
-                app:cornerRadius="30dp"
-                android:elevation="40dp"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:padding="0dp"
-                android:layout_centerHorizontal="false"
-                android:backgroundTint="@color/EspecialBlue"
-                android:text="3"
-                android:textSize="35dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/flecha"
                 android:layout_marginEnd="40dp"
-
+                android:rotation="180"
                 />
-            <Button
+
+            <ImageButton
                 android:id="@+id/btnDer"
-                app:cornerRadius="30dp"
-                android:elevation="40dp"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:padding="0dp"
-                android:layout_centerHorizontal="false"
-                android:backgroundTint="@color/EspecialBlue"
-                android:text="4"
-                android:textSize="35dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/flecha"
+                android:layout_marginEnd="40dp"
                 android:layout_toRightOf="@+id/btnIzq"
 
                 />
+
 
 
 
@@ -139,56 +81,52 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="0dp"
-            android:layout_marginEnd="50dp"
             android:layout_centerVertical="true"
             android:layout_alignParentEnd="true"
             >
 
 
-            <Button
+            <ImageButton
                 android:id="@+id/btnFren"
                 app:cornerRadius="30dp"
                 android:elevation="40dp"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:padding="0dp"
-                android:layout_centerHorizontal="false"
-                android:backgroundTint="@color/EspecialBlue"
-                android:text="1"
-                android:textSize="35dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/asdas"
                 android:layout_alignParentEnd="true"
                 />
 
-            <Button
+            <ImageButton
+                android:id="@+id/btnDown"
+                app:cornerRadius="30dp"
+                android:elevation="40dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/asdas"
+                android:layout_below="@+id/btnFren"
+                android:rotation="180"
+                android:layout_alignParentEnd="true"/>
+
+            <ImageButton
                 android:id="@+id/btnLock"
                 app:cornerRadius="30dp"
                 android:elevation="40dp"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:padding="0dp"
-                android:layout_centerHorizontal="false"
-                android:backgroundTint="@color/EspecialRed"
-                android:text="5"
-                android:textSize="35dp"
+                android:background="@drawable/stop"
                 android:layout_marginEnd="30dp"
                 android:layout_toLeftOf="@+id/btnFren"
                 />
 
-            <Button
-                android:id="@+id/btnDown"
-                app:cornerRadius="30dp"
-                android:elevation="40dp"
+            <ImageButton
+                android:id="@+id/btnCon"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:padding="0dp"
-                android:layout_marginTop="40dp"
-                android:layout_centerHorizontal="false"
-                android:backgroundTint="@color/EspecialBlue"
-                android:text="2"
-                android:textSize="35dp"
-                android:layout_below="@+id/btnFren"
-                android:layout_alignParentEnd="true"
-                />
+                android:background="@drawable/conectar"
+                android:layout_centerHorizontal="true"
+                android:elevation="10dp"
+                app:cornerRadius="30dp" />
 
         </RelativeLayout>
 

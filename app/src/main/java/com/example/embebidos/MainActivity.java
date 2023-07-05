@@ -13,6 +13,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.Manifest;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -27,7 +28,7 @@ import java.util.UUID;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button front, back, left, right, lock, esp1, esp2, connectButton;
+    private ImageButton front, back, left, right, connectButton, lock;
     private BluetoothSocket socket;
     private static final int REQUEST_PERMISSION = 1;
 
@@ -50,8 +51,6 @@ public class MainActivity extends AppCompatActivity {
         left = findViewById(R.id.btnIzq);
         right = findViewById(R.id.btnDer);
         lock = findViewById(R.id.btnLock);
-        esp1 = findViewById(R.id.btnEsp1);
-        esp2 = findViewById(R.id.btnEsp2);
 
         connectButton = findViewById(R.id.btnCon);
 
@@ -141,27 +140,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        esp1.setOnClickListener(view -> {
-            if (socket != null && socket.isConnected()) {
-                try {
-                    String signal = "6";
-                    socket.getOutputStream().write(signal.getBytes());
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-
-        esp2.setOnClickListener(view -> {
-            if (socket != null && socket.isConnected()) {
-                try {
-                    String signal = "7";
-                    socket.getOutputStream().write(signal.getBytes());
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
 
     }
 
