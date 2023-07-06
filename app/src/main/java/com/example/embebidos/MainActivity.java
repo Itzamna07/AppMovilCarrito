@@ -58,8 +58,6 @@ public class MainActivity extends AppCompatActivity {
             setupBluetooth();
         });
 
-        // Configurar la conexión Bluetooth
-        setupBluetooth();
 
         front.setOnTouchListener((view, event) -> {
             if (socket != null && socket.isConnected()) {

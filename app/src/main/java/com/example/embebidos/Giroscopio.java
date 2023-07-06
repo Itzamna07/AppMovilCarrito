@@ -98,7 +98,9 @@ public class Giroscopio extends AppCompatActivity implements SensorEventListener
     private void setupBluetooth() {
         BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         if (bluetoothAdapter != null && bluetoothAdapter.isEnabled()) {
-            checkBluetoothPermission();
+            if (bluetoothAdapter.isEnabled()) {
+                checkBluetoothPermission();
+            }
             Set<BluetoothDevice> pairedDevices = bluetoothAdapter.getBondedDevices();
             BluetoothDevice targetDevice = buscarDispositivo(pairedDevices, "WERICHA");
             if (targetDevice != null) {
@@ -182,11 +184,13 @@ public class Giroscopio extends AppCompatActivity implements SensorEventListener
                     }
                 }
             }else{
+                if (socket != null && socket.isConnected()) {
                 try {
                     String signal = "5";
                     socket.getOutputStream().write(signal.getBytes());
                 } catch (IOException e) {
                     e.printStackTrace();
+                }
                 }
             }
 
