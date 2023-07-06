@@ -18,10 +18,13 @@
         android:theme="@style/Theme.EMBEBIDOS"
         tools:targetApi="31">
         <activity
-            android:name=".Menu"
+            android:name=".Giroscopio"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Menu"
             android:exported="true"
             android:screenOrientation="landscape">
             <intent-filter>
