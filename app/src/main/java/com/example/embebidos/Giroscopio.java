@@ -146,8 +146,9 @@ public class Giroscopio extends AppCompatActivity implements SensorEventListener
             accelerationY = event.values[1];
             accelerationZ = event.values[2];
 
+
             // Puedes realizar las acciones necesarias con los valores del acelerómetro
-            if (accelerationX>15) {
+            if (accelerationX>5) {
                 if (socket != null && socket.isConnected()) {
                     try {
                         String signal = "1";
@@ -156,7 +157,7 @@ public class Giroscopio extends AppCompatActivity implements SensorEventListener
                         e.printStackTrace();
                     }
                 }
-            }else if(accelerationX<-15){
+            }else if(accelerationX<-5){
                 if (socket != null && socket.isConnected()) {
                     try {
                         String signal = "2";
@@ -165,7 +166,7 @@ public class Giroscopio extends AppCompatActivity implements SensorEventListener
                         e.printStackTrace();
                     }
                 }
-            }else if(accelerationY>15){
+            }else if(accelerationY>5){
                 if (socket != null && socket.isConnected()) {
                     try {
                         String signal = "3";
@@ -174,7 +175,7 @@ public class Giroscopio extends AppCompatActivity implements SensorEventListener
                         e.printStackTrace();
                     }
                 }
-            }else if(accelerationY< -15){
+            }else if(accelerationY< -5){
                 if (socket != null && socket.isConnected()) {
                     try {
                         String signal = "4";
@@ -187,6 +188,7 @@ public class Giroscopio extends AppCompatActivity implements SensorEventListener
                 if (socket != null && socket.isConnected()) {
                 try {
                     String signal = "5";
+                    Toast.makeText(this, "EEEWE", Toast.LENGTH_SHORT).show();
                     socket.getOutputStream().write(signal.getBytes());
                 } catch (IOException e) {
                     e.printStackTrace();
